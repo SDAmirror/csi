@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="Blob.js"></script>
+    <script src="FileSaver.js"></script>
+
+    <script src="tableexport.js"></script>
+    <script>
+
+        function addDisplay(id){
+            document.getElementById('addRowID').value = id;
+            document.getElementById('addRowBlock').style.display = 'block';
+
+        }x
+
+    </script>
+</head>
+
+
+<body>
+<h1>ITEMS</h1>
+<div id="addRowBlock" style="display: none">
+
+
+    <form method="post" action="/items/add">
+        <div><input type="text" id="addRowName" name="addRowName" placeholder="name"></div>
+        <div><input type="number" id="addRowPrice" name="addRowPrice" placeholder="price"></div>
+        <div><input type="number" id="addRowAmount" name="addRowAmount" placeholder="amoutn"></div>
+        <div><input type="text" id="addRowID" name="addRowID" value="" hidden></div>
+        <div><button type="submit" id="addRowButton" >ДОБАВИТЬ</button></div>
+
+    </form>
+
+</div>
+
+<table id="tab">
+    <tr>
+        <td>Деталь</td>	<td>Цена</td>	<td>Количество</td>	<td>Стоимость</td>  <td>Действия</td>
+    </tr>
+    <%for(var i = 0;i<table.length;i++){%>
+       <tr>
+
+           <td><%=table[i].ID%> <%=table[i].name%></td>
+           <td><%=table[i].price%></td>
+           <td><%=table[i].amount%></td>
+           <td><%=table[i].total%></td>
+           <td>
+               <div style="display: grid;grid-template-columns: 1fr 1fr">
+                   <form action="/items/delete" method="post">
+                       <input type="text" hidden name="deleteRowID" value="<%=table[i].ID%>">
+                       <input type="submit" value="УДАЛИТЬ" style="background-color: red">
+                   </form>
+                   <!--               <input type="button" onclick="addDisplay('<%=table[i].ID%>')" style="background-color: green" id="ADD">-->
+                   <button onclick="addDisplay('<%=table[i].ID%>')" style="background-color: green" id="ADD">ДОБАВИТЬ</button>
+               </div>
+           </td>
+       </tr>
+    <%}%>
+
+
+
+</table>
+<button id="exportB">export to excel</button>
+
+<a href="/items/download">XLSX</a>
+<a href="/items/dpdf">PDF</a>
+</body>
+
+</html>

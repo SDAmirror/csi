@@ -1,0 +1,119 @@
+{
+  "name": "items",
+  "price": 0,
+  "total_price": 0,
+  "amount": 50,
+  "children": [
+    {
+      "name": "кузов",
+      "price": 0,
+      "total_price": 0,
+      "amount": 8,
+      "children": [
+        {
+          "name": "дверь",
+          "price": 0,
+          "total_price": 0,
+          "amount": 5,
+          "children": [
+            {
+              "name": "ручка",
+              "price": 6000,
+              "total_price": 0,
+              "amount": 2,
+              "chidren": []
+            },
+            {
+              "name": "стекло",
+              "price": 7000,
+              "total_price": 0,
+              "amount": 3,
+              "chidren": []
+            },
+            {
+              "name": "стеклоподъемник",
+              "price": 0,
+              "total_price": 0,
+              "amount": 6,
+              "children": [
+                {
+                  "name": "мотор",
+                  "price": 4000,
+                  "total_price": 4000,
+                  "amount": 3,
+                  "children": []
+                },
+                {
+                  "name": "трос",
+                  "price": 1500,
+                  "total_price": 1500,
+                  "amount": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "багажник",
+          "price": 0,
+          "total_price": 0,
+          "amount": 50,
+          "children": [
+            {
+              "name": "багажник",
+              "price": 6000,
+              "total_price": 6000,
+              "amount": 2,
+              "children": []
+            },
+            {
+              "name": "стоп огни",
+              "price": 3000,
+              "total_price": 3000,
+              "amount": 3,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "двигатель",
+      "price": 0,
+      "total_price": 0,
+      "amount": 50,
+      "children": [
+        {
+          "name": "блок",
+          "price": 133000,
+          "total_price": 133000,
+          "amount": 1,
+          "children": [
+            {
+              "name": "голова",
+              "price": 50000,
+              "total_price": 0,
+              "amount": 1,
+              "children": []
+            },
+            {
+              "name": "корпус",
+              "price": 40000,
+              "total_price": 0,
+              "amount": 1,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "поршни",
+          "price": 13000,
+          "total_price": 13000,
+          "amount": 5,
+          "children": []
+        }
+      ]
+    }
+  ]
+}
